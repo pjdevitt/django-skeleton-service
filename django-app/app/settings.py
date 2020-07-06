@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
-    'django_q'
+    'django_q',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,9 @@ Q_CLUSTER = {
         'db': 0, 
     }
 }
+
+NOTEBOOK_ARGUMENTS = [
+    '--ip', '0.0.0.0', 
+    '--allow-root',
+    '--no-browser' 
+]
