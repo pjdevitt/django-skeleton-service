@@ -11,10 +11,22 @@ services:
             - ./django-app:/usr/src/app
         ports:
             - 8000:8000
+        env_file:
+            - ./env.dev
+            
+    notebook:
+        build: .
+        depends_on:
+            - db
+            - redis
+        command: python manage.py shell_plus --notebook
+        volumes:
+            - ./django-app:/usr/src/app
+        ports:
             - 8888:8888
         env_file:
             - ./env.dev
-
+        
     worker:
         build: .
         depends_on:
