@@ -17,7 +17,7 @@ django-pandas==0.6.2
 django-picklefield==3.0.1
 django-q==1.2.4
 django-storages==1.9.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 entrypoints==0.3
 idna==2.9
 importlib-metadata==1.7.0
